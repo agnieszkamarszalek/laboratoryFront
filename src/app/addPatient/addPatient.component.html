@@ -1,0 +1,37 @@
+<form #patientForm = "ngForm" id="patient_data" novalidate (ngSubmit) = "addNewPatientPostMethod(patientForm)">
+  <div class="form-group row">
+    <label for="firstName" class="col-sm-2 col-form-label">Imię</label>
+    <div class="col-sm-3">
+      <input type="text" class="form-control" id="firstName" name="firstName" (input)="setFirstName($event)" ngModel>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="lastName" class="col-sm-2 col-form-label">Nazwisko</label>
+    <div class="col-sm-3">
+      <input type="text" class="form-control" id="lastName" name="lastName" (input)="setLastName($event)" ngModel>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="pesel" class="col-sm-2 col-form-label">Pesel</label>
+    <div class="col-sm-3">
+      <input type="text" class="form-control" id="pesel" name="pesel" (input)="setPesel($event)" ngModel>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="gender" class="col-sm-2 col-form-label">Płeć</label>
+    <div class="col-sm-3">
+      <input type="text" class="form-control" id="gender" name="gender" (input)="setGender($event)" ngModel>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="phoneNumber" class="col-sm-2 col-form-label" ngModel>Numer telefonu</label>
+    <div class="col-sm-3">
+      <input type="text" class="form-control" id="phoneNumber" name="phoneNumber" (input)="setPhoneNumber($event)" ngModel>
+    </div>
+  </div>
+  <button class="btn btn-primary mb-3" type="submit" >Zapisz</button>
+
+</form>
+{{patientForm.value | json}}
+
+<!--<button (click)="addNewPatientPostMethod()" >Zapisz</button>-->
