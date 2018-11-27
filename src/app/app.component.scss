@@ -1,6 +1,13 @@
 
    .main_content {
      height: 90%;
+     display: flex;
+     #left-main-conten{
+       flex-grow: 3;
+     }
+     #right-main-content{
+       flex-grow: 7;
+     }
    }
 
 

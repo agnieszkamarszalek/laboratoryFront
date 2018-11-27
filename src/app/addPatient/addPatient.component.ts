@@ -1,11 +1,13 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, NgModule, OnInit} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
+import {RegistrationOfficeComponent} from '../registration-office/registration-office.component';
 
 @Component({
   selector: 'app-addPatient',
   templateUrl: './addPatient.component.html',
   styleUrls: ['./addPatient.component.scss']
 })
+
 export class AddPatientComponent implements OnInit {
   firstName = '';
   lastName = '';
@@ -43,7 +45,7 @@ export class AddPatientComponent implements OnInit {
 
   addNewPatientPostMethod(form) {
     console.log('test');
-    this.httpClient.post('http://localhost:8081/patients', {
+    this.httpClient.post('http://localhost:8082/patients', {
       firstName: this.firstName,
       lastName: this.lastName,
       pesel: this.pesel,
@@ -63,3 +65,5 @@ export class AddPatientComponent implements OnInit {
   ngOnInit(): void {
   }
 }
+
+

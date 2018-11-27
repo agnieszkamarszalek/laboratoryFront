@@ -1,4 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, NgModule, OnInit} from '@angular/core';
+import {Routes, RouterModule} from '@angular/router';
+import {AddPatientComponent} from '../addPatient/addPatient.component';
+
+const routes: Routes = [
+  {path: 'addPatient', component: AddPatientComponent }
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
 
 @Component({
   selector: 'app-registration-office',
@@ -13,3 +24,6 @@ export class RegistrationOfficeComponent implements OnInit {
   }
 
 }
+
+export const routingComponentFromRegistrOffice = [AddPatientComponent]
+

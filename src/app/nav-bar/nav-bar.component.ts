@@ -2,9 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 import {RegistrationOfficeComponent} from '../registration-office/registration-office.component';
+import {AddPatientComponent} from '../addPatient/addPatient.component';
 
 const routes: Routes = [
-  {path: 'registrationOffice', component: RegistrationOfficeComponent}
+  {path: 'registrationOffice', component: RegistrationOfficeComponent},
+  {path: 'addPatient', component: AddPatientComponent}
 ];
 
 @NgModule ({
