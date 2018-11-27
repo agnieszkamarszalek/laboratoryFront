@@ -6,18 +6,23 @@ import {AddPatientComponent} from './addPatient/addPatient.component';
 import {HttpClientModule} from '@angular/common/http';
 import {InterceptorModule} from './interceptor.module';
 import {FormsModule} from '@angular/forms';
+import { NavBarComponent, routingComponents } from './nav-bar/nav-bar.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    AddPatientComponent
+    AddPatientComponent,
+    NavBarComponent,
+    routingComponents
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     InterceptorModule,
-    FormsModule
+    FormsModule,
+    NavBarComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,25 +1,9 @@
 <!--The content below is only a placeholder and can be replaced.-->
 
-  <header>
-    <ul class="nav justify-content-end">
-    <li class="nav-item" class="w-20 p-3">
-      <a class="nav-link active" href="#"></a>
-    </li>
-    <li class="nav-item" class="w-20 p-3">
-      <a class="nav-link" href="#"><img class="nav_icon" src="../assets/icons/clipboard.png"></a>
-    </li>
-    <li class="nav-item" class="w-20 p-3">
-      <a class="nav-link" href="#"><img class="nav_icon" src="../assets/icons/scientist.png"></a>
-    </li>
-    <li class="nav-item" class="w-20 p-3">
-      <a class="nav-link disabled" href="#"><img class="nav_icon" src="../assets/icons/loupe.png"></a>
-    </li>
-    <li class="nav-item" class="w-20 p-3">
-      <a class="nav-link disabled" href="#"><img class="nav_icon" src="../assets/icons/clock.png"></a>
-    </li>
-    </ul>
-  </header>
+  <app-nav-bar></app-nav-bar>
   <div class="main_content">
+
+    <router-outlet></router-outlet>
     <app-addPatient></app-addPatient>
   </div>
 
