@@ -3,10 +3,12 @@ import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 import {RegistrationOfficeComponent} from '../registration-office/registration-office.component';
 import {AddPatientComponent} from '../addPatient/addPatient.component';
+import {FindPatientComponent} from '../find-patient/find-patient.component';
 
 const routes: Routes = [
   {path: 'registrationOffice', component: RegistrationOfficeComponent},
-  {path: 'addPatient', component: AddPatientComponent}
+  {path: 'addPatient', component: AddPatientComponent},
+  {path: 'findPatient', component: FindPatientComponent}
 ];
 
 @NgModule ({
@@ -28,4 +30,4 @@ export class NavBarComponent implements OnInit {
 
 }
 
-export const routingComponents = [RegistrationOfficeComponent];
+export const routingComponents = [RegistrationOfficeComponent, AddPatientComponent, FindPatientComponent];

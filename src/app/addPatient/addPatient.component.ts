@@ -14,6 +14,7 @@ export class AddPatientComponent implements OnInit {
   pesel = '';
   gender = '';
   phoneNumber = '';
+  errorMessage = '';
 
   constructor(private httpClient: HttpClient) {
 
@@ -45,18 +46,22 @@ export class AddPatientComponent implements OnInit {
 
   addNewPatientPostMethod(form) {
     console.log('test');
-    this.httpClient.post('http://localhost:8082/patients', {
+     this.httpClient.post('http://localhost:8082/patients', {
       firstName: this.firstName,
       lastName: this.lastName,
       pesel: this.pesel,
       gender: this.gender,
       phoneNumber: this.phoneNumber
     })
-      .subscribe(
+       .subscribe(
         (data: any) => {
           if (data.lenght) {
             console.log(data);
           }
+        }, (error1) => {
+           console.log(':(');
+           this.errorMessage = error1.error.message;
+           console.log(error1.error.message);
         }
       );
     form.reset();

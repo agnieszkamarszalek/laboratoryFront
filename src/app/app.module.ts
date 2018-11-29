@@ -7,7 +7,8 @@ import {HttpClientModule} from '@angular/common/http';
 import {InterceptorModule} from './interceptor.module';
 import {FormsModule} from '@angular/forms';
 import { NavBarComponent, routingComponents } from './nav-bar/nav-bar.component';
-import {RegistrationOfficeComponent, routingComponentFromRegistrOffice} from './registration-office/registration-office.component';
+import {RegistrationOfficeComponent} from './registration-office/registration-office.component';
+import { FindPatientComponent } from './find-patient/find-patient.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import {RegistrationOfficeComponent, routingComponentFromRegistrOffice} from './
     NavBarComponent,
     routingComponents,
     RegistrationOfficeComponent,
-    routingComponentFromRegistrOffice
+
+    FindPatientComponent
   ],
   imports: [
     BrowserModule,
